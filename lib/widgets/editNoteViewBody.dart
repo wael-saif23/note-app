@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom_app_bar.dart';
+
 
 
 class editNoteViewBody extends StatelessWidget {
@@ -7,6 +9,14 @@ class editNoteViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: Column(children:const [
+        SizedBox(
+              height: 32,
+            ),
+            customAppBar(title: "Edit Notes",icon: Icons.check),
+      ],),
+    );
   }
 }
