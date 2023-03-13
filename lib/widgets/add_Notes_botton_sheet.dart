@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
-import 'package:noteapp/contants.dart';
+
 import 'package:noteapp/widgets/custom_botton.dart';
 
 import 'custom_textfeld.dart';
 
-class addNoteBottonSheet extends StatelessWidget {
-  const addNoteBottonSheet({super.key});
+class AddNoteBottonSheet extends StatelessWidget {
+  const AddNoteBottonSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: SingleChildScrollView(
-        child: formAddNote(),
+        child: FormAddNote(),
       ),
     );
   }
 }
 
-class formAddNote extends StatefulWidget {
-  const formAddNote({
+class FormAddNote extends StatefulWidget {
+  const FormAddNote({
     super.key,
   });
 
   @override
-  State<formAddNote> createState() => _formAddNoteState();
+  State<FormAddNote> createState() => _FormAddNoteState();
 }
 
-class _formAddNoteState extends State<formAddNote> {
+class _FormAddNoteState extends State<FormAddNote> {
   final GlobalKey<FormState> formKey = GlobalKey();
 
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -44,36 +44,34 @@ class _formAddNoteState extends State<formAddNote> {
           const SizedBox(
             height: 32,
           ),
-          customTextfeld(
+          CustomTextfeld(
               onSave: (value) {
                 title = value;
               },
               hint: "title"),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
-          customTextfeld(
+          CustomTextfeld(
               onSave: (value) {
                 subtitle = value;
               },
               hint: "contant",
               maxline: 6),
-          SizedBox(
+          const SizedBox(
             height: 32,
           ),
-          customBotton(
+          CustomBotton(
             onTap: () {
               if (formKey.currentState!.validate()) {
                 formKey.currentState!.save();
               } else {
                 autovalidateMode = AutovalidateMode.always;
-                setState(() {
-                  
-                });
+                setState(() {});
               }
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
         ],

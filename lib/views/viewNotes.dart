@@ -3,8 +3,8 @@ import 'package:noteapp/widgets/add_Notes_botton_sheet.dart';
 
 import '../widgets/notes_view_body.dart';
 
-class viewNotes extends StatelessWidget {
-  const viewNotes({super.key});
+class ViewNotes extends StatelessWidget {
+  const ViewNotes({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,18 +12,17 @@ class viewNotes extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showModalBottomSheet(
-            shape: ContinuousRectangleBorder(borderRadius: BorderRadius.circular(24)),
+              shape: ContinuousRectangleBorder(
+                  borderRadius: BorderRadius.circular(24)),
               context: context,
               builder: (context) {
-                return const addNoteBottonSheet();
+                return const AddNoteBottonSheet();
               });
         },
-        child: const  Icon(Icons.add),
         backgroundColor: Colors.blueGrey.withOpacity(.6),
+        child: const Icon(Icons.add),
       ),
       body: const notesViewBody(),
     );
   }
 }
-
-

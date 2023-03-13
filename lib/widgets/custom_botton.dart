@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:noteapp/contants.dart';
 
-class customBotton extends StatelessWidget {
-  const customBotton({super.key, this.onTap});
+class CustomBotton extends StatelessWidget {
+  const CustomBotton({super.key, this.onTap});
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {

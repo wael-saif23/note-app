@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:noteapp/views/editNoteView.dart';
 
-class noteItem extends StatelessWidget {
-  const noteItem({super.key});
+class NoteItem extends StatelessWidget {
+  const NoteItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +12,12 @@ class noteItem extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => editNoteView()),
+          MaterialPageRoute(builder: (context) => EditNoteView()),
         );
       },
       child: Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 184, 131, 88),
+            color:const Color.fromARGB(255, 184, 131, 88),
             borderRadius: BorderRadius.circular(16)),
         child: Padding(
           padding: const EdgeInsets.only(top: 24, bottom: 24, left: 14),
