@@ -11,7 +11,7 @@ class customTextfeld extends StatelessWidget {
       maxLines: maxline,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: TextStyle(fontSize: 20, color: kPrimaryColor,),
+        hintStyle: const TextStyle(fontSize: 20, color: kPrimaryColor,),
         border: buildBorder(),
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(kPrimaryColor),
